@@ -1,53 +1,288 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
 header {
-    background: #007bff;
-    color: #fff;
-    padding: 1rem 0;
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
-header p {
-    margin: 0.5rem 0 0;
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
+/* Main Content Styles */
 main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Article and Section Styles */
+article {
+    background: white;
+    border-radius: 10px;
     padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-section#privacy-policy {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
 }
 
-h2, h3 {
-    color: #007bff;
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-ul {
-    list-style: disc;
-    margin-left: 2rem;
+/* Headings */
+h2 {
+    color: #1a73e8;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
+h3 {
+    color: #1a73e8;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+/* Policy Meta Information */
+.policy-meta {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.policy-meta p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+ul ul, ol ol {
+    margin: 0.5rem 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Paragraphs and Text */
+p {
+    margin: 1rem 0;
+    line-height: 1.7;
+}
+
+strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Footer */
 footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Additional Elements */
+.information-collection ul,
+.information-use ul,
+.data-security ul,
+.data-sharing ul,
+.user-rights ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.information-collection ul li,
+.information-use ul li,
+.data-security ul li,
+.data-sharing ul li,
+.user-rights ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.information-collection ul ul,
+.data-security ul ul {
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+}
+
+.information-collection ul ul li,
+.data-security ul ul li {
+    border-bottom: none;
+    padding: 0.3rem 0;
+}
+
+/* Special Sections */
+.introduction {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.acceptance {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+/* Contact Section */
+.contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact ul li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact ul li strong {
+    min-width: 100px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    article {
+        box-shadow: none;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    header, footer {
+        background: none;
+        color: black;
+    }
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }
